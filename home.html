@@ -4,24 +4,40 @@
     <title>HealthPlate – Home</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
-    <div class="welcome-container">
-      <h1>👋 Welcome to HealthPlate</h1>
-      <p>Let’s get started with 3 quick steps</p>
+  <body class="home-body">
+    <button class="top-right-button" onclick="location.href='index.html'">
+      Onboarding
+    </button>
+    <div class="home-card">
+      <h1>👋 Ласкаво просимо до HealthPlate</h1>
+      <p>Тут ти можеш відстежувати свій раціон і досягати цілей!</p>
+      <div class="home-container">
+        <h2>Сьогодні, 15 Лютого</h2>
+
+        <div class="meal completed">✔️ Сніданок (Вівсянка з ягодами)</div>
+        <p class="next-instruction">👇 Окей, а тепер спробуй відмітити обід!</p>
+        <div class="meal active">▶️ Обід (Салат з куркою)</div>
+        <div class="meal">▶️ Вечеря (Запечена риба)</div>
+
+        <div class="calories">Калорії: 1500 / 1800</div>
+
+        <div class="disabled">
+          🔒 Тижневий план
+          <span class="tooltip">Розблокується на 3 день використання</span>
+        </div>
+
+        <div class="disabled">
+          🔒 Налаштування профілю
+          <span class="tooltip">Розблокується на 3 день використання</span>
+        </div>
+
+        <div class="disabled">
+          🔒 Історія
+          <span class="tooltip">Розблокується на 3 день використання</span>
+        </div>
+      </div>
     </div>
 
-    <div class="home-container">
-      <h2>Сьогодні, 15 Лютого</h2>
-
-      <div class="meal completed">✔️ Сніданок (Овсянка з ягодами)</div>
-      <div class="meal active">▶️ Обід (Салат з куркою)</div>
-      <div class="meal">▶️ Вечеря (Запечена риба)</div>
-
-      <div class="calories">Калорії: 1500 / 1800</div>
-
-      <div class="disabled">Тижневий план</div>
-      <div class="disabled">Налаштування</div>
-    </div>
-    <button onclick="location.href='index.html'">Back to Onboarding</button>
+    <script src="js/main.js"></script>
   </body>
 </html>

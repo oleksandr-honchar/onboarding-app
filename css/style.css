@@ -7,7 +7,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  overflow: hidden; /* 🟢 Prevent body overflow */
+  overflow: hidden;
 }
 
 h1 {
@@ -164,4 +164,177 @@ input[type="radio"] {
 .done-button:hover {
   background-color: #218838;
   transform: scale(1.05);
+}
+
+/* Switch page button */
+
+.top-right-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: #0a84ff;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.top-right-button:hover {
+  background-color: #006fe0;
+}
+
+/* 🌌 Home Screen Layout Match */
+
+.home-body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.home-card {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  width: 85%;
+  max-width: 350px;
+  height: 600px;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 💡 Optional: Shared button style reuse */
+.home-button {
+  background: #0a84ff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.home-button:hover {
+  background: #006fe0;
+}
+
+/* 🏠 Home Layout Container */
+.home-container {
+  margin-top: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 🍽 Meal Block */
+.meal {
+  background-color: #333;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 1.4;
+  transition: background 0.3s ease;
+}
+
+/* ✅ Completed Meal */
+.meal.completed {
+  background-color: #28a745; /* green */
+  color: #fff;
+  font-weight: bold;
+}
+
+/* ⏳ Active Meal */
+.meal.active {
+  background-color: #0a84ff; /* blue */
+  color: #fff;
+  font-weight: bold;
+}
+
+/* 🔲 Default Upcoming */
+.meal:not(.completed):not(.active) {
+  background-color: #444;
+  color: #ccc;
+}
+
+/* 🔥 Calorie Info */
+.calories {
+  margin-top: 12px;
+  background-color: #555;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* 🚫 Disabled Buttons */
+.disabled {
+  margin-top: 4px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background-color: #222;
+  color: #666;
+  text-align: center;
+  font-style: italic;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* 🧭 Micro-instruction for next meal */
+.next-instruction {
+  margin-top: 8px;
+  margin-bottom: 4px;
+  padding-left: 10px;
+  font-style: italic;
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* 🔒 Tooltip container */
+.disabled {
+  position: relative;
+  background-color: #222;
+  color: #666;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-align: center;
+  opacity: 0.6;
+  cursor: not-allowed;
+  font-size: 15px;
+}
+
+/* 📝 Tooltip text */
+.disabled .tooltip {
+  visibility: hidden;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 6px;
+  position: absolute;
+  bottom: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* 📣 Show on hover */
+.disabled:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
 }
