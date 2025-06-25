@@ -25,44 +25,62 @@
         <label
           ><input type="radio" name="goal" value="Набір" /> Набір ваги</label
         ><br />
-        <button onclick="nextStep()">Далі ></button>
+        <div class="button-row right">
+          <button onclick="nextStep()">Далі ></button>
+        </div>
       </div>
 
       <!-- Step 2 -->
       <div class="step hidden" id="step-2">
-        <h2>Трохи про вас</h2>
+        <h2>Трохи про Вас</h2>
         <label>Ваш вік: <input type="number" id="age" /></label><br /><br />
-        <label><input type="radio" name="gender" value="Ч" /> Ч</label>
-        <label><input type="radio" name="gender" value="Ж" /> Ж</label
-        ><br /><br />
-        <label
-          ><input type="radio" name="activity" value="Низький" /> Низький</label
-        ><br />
-        <label
-          ><input type="radio" name="activity" value="Середній" />
-          Середній</label
-        ><br />
-        <label
-          ><input type="radio" name="activity" value="Високий" /> Високий</label
-        ><br /><br />
-        <button onclick="prevStep()">< Назад</button>
-        <button onclick="nextStep()">Далі ></button>
+        <p>Ваша стать:</p>
+        <div class="radio-row">
+          <label><input type="radio" name="gender" value="Ч" /> Ч</label>
+          <label><input type="radio" name="gender" value="Ж" /> Ж</label>
+        </div>
+        <p>Рівень активності:</p>
+        <div class="radio-row">
+          <label
+            ><input type="radio" name="activity" value="Низький" />
+            Низький</label
+          >
+          <label
+            ><input type="radio" name="activity" value="Середній" />
+            Середній</label
+          >
+          <label
+            ><input type="radio" name="activity" value="Високий" />
+            Високий</label
+          >
+        </div>
+        <div class="button-row space-between">
+          <button onclick="prevStep()">< Назад</button>
+          <button onclick="nextStep()">Далі ></button>
+        </div>
       </div>
 
       <!-- Step 3 -->
       <div class="step hidden" id="step-3">
-        <h2>🎉 Вітаємо! Ваш сніданок готовий!</h2>
+        <h2>Вітаємо! Ваш сніданок готовий!</h2>
         <p><strong>СЬОГОДНІШНІЙ СНІДАНОК</strong></p>
         <hr />
+        <img
+          src="./img/oatmeal-with-berries-1024x750.webp"
+          alt="вівсянка"
+          class="meal-img"
+        />
         <p>Вівсянка з ягодами (300 ккал)</p>
         <hr />
         <br />
-        <button onclick="alert('Позначено як виконано')">
-          Відмітити як "Виконано"</button
-        ><br /><br />
-        <button onclick="alert('Показуємо план на день')">
-          Подивитись весь план на день >
-        </button>
+        <div class="button-row space-between">
+          <button onclick="alert('Позначено як виконано')">
+            Відмітити як "Виконано"</button
+          ><br /><br />
+          <button onclick="alert('Показуємо план на день')">
+            Весь план на день >
+          </button>
+        </div>
       </div>
     </div>
 
