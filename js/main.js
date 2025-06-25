@@ -5,7 +5,7 @@ function showStep(n) {
     el.classList.toggle("hidden", i !== n - 1);
   });
   document.getElementById("progress").style.width = n * 33.33 + "%";
-  document.getElementById("step-label").textContent = `Прогрес: ${n}/3`;
+  document.getElementById("step-label").textContent = `Крок ${n}/3`;
 }
 
 function nextStep() {
@@ -21,9 +21,8 @@ function prevStep() {
 document.getElementById("doneButton").addEventListener("click", () => {
   alert("Чудово! Ви зробили перший крок до своєї мети! 🎉");
 
-  // Затримка та перехід на головний екран
   setTimeout(() => {
-    showMainScreen(); // функція, яка показує головний екран
+    showMainScreen();
   }, 2000);
 });
 

@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HealthPlate Onboarding</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <div class="card">
       <h1>HealthPlate</h1>
       <div class="progress-bar"><div id="progress"></div></div>
-      <p id="step-label">Прогрес: 1/3</p>
+      <p id="step-label">Крок 1/3</p>
 
       <!-- Step 1 -->
       <div class="step" id="step-1">
@@ -62,7 +62,7 @@
 
       <!-- Step 3 -->
       <div class="step hidden" id="step-3">
-        <h2>Вітаємо! Ваш сніданок готовий!</h2>
+        <h2>Вітаємо! Ваш сніданок готовий! Це ваш перший крок до мети!</h2>
         <p><strong>СЬОГОДНІШНІЙ СНІДАНОК</strong></p>
         <hr />
         <img
@@ -74,7 +74,9 @@
         <hr />
         <br />
         <div class="button-row space-between">
-          <button id="doneButton">Відмітити як "Виконано"</button><br /><br />
+          <button id="doneButton" class="done-button">
+            Відмітити як "Виконано"</button
+          ><br /><br />
           <button onclick="alert('Показуємо план на день')">
             Весь план на день >
           </button>
@@ -82,6 +84,6 @@
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
