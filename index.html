@@ -1,15 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>HealthPlate Onboarding</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- <script src="./js/task-1.js"></script>
-    <script src="./js/task-2.js"></script>
-    <script src="./js/task-3.js"></script>
-    <script src="./js/draft.js"></script> -->
-    <script src="./js/draft2.js"></script>
+    <div class="card">
+      <h1>HealthPlate</h1>
+      <div class="progress-bar"><div id="progress"></div></div>
+      <p id="step-label">Прогрес: 1/3</p>
+
+      <!-- Step 1 -->
+      <div class="step" id="step-1">
+        <h2>Оберіть свою мету</h2>
+        <label
+          ><input type="radio" name="goal" value="Схуднення" /> Схуднення</label
+        ><br />
+        <label
+          ><input type="radio" name="goal" value="Підтримка" /> Підтримка
+          ваги</label
+        ><br />
+        <label
+          ><input type="radio" name="goal" value="Набір" /> Набір ваги</label
+        ><br />
+        <button onclick="nextStep()">Далі ></button>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step hidden" id="step-2">
+        <h2>Трохи про вас</h2>
+        <label>Ваш вік: <input type="number" id="age" /></label><br /><br />
+        <label><input type="radio" name="gender" value="Ч" /> Ч</label>
+        <label><input type="radio" name="gender" value="Ж" /> Ж</label
+        ><br /><br />
+        <label
+          ><input type="radio" name="activity" value="Низький" /> Низький</label
+        ><br />
+        <label
+          ><input type="radio" name="activity" value="Середній" />
+          Середній</label
+        ><br />
+        <label
+          ><input type="radio" name="activity" value="Високий" /> Високий</label
+        ><br /><br />
+        <button onclick="prevStep()">< Назад</button>
+        <button onclick="nextStep()">Далі ></button>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step hidden" id="step-3">
+        <h2>🎉 Вітаємо! Ваш сніданок готовий!</h2>
+        <p><strong>СЬОГОДНІШНІЙ СНІДАНОК</strong></p>
+        <hr />
+        <p>Вівсянка з ягодами (300 ккал)</p>
+        <hr />
+        <br />
+        <button onclick="alert('Позначено як виконано')">
+          Відмітити як "Виконано"</button
+        ><br /><br />
+        <button onclick="alert('Показуємо план на день')">
+          Подивитись весь план на день >
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

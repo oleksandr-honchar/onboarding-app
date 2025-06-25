@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.progress-bar {
+  background: #444;
+  height: 8px;
+  border-radius: 5px;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+#progress {
+  background: #0f0;
+  height: 100%;
+  width: 33%;
+  transition: width 0.3s;
+}
+
+button {
+  background: #0a84ff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #006fe0;
+}
+
+.hidden {
+  display: none;
+}
