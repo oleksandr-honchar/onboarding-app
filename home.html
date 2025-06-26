@@ -1,45 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HealthPlate – Home</title>
+    <title>Home</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body class="home-body">
     <button class="top-right-button" onclick="location.href='index.html'">
-      Onboarding
+      Go to Onboarding
     </button>
+
     <div class="home-card">
       <h1>👋 Ласкаво просимо до HealthPlate</h1>
       <p>Тут ти можеш відстежувати свій раціон і досягати цілей!</p>
-      <div class="home-container">
-        <h2>Сьогодні, 15 Лютого</h2>
 
+      <div id="screen-1" class="screen">
+        <h2>Сьогодні, 15 Лютого</h2>
         <div class="meal completed">✔️ Сніданок (Вівсянка з ягодами)</div>
         <p class="next-instruction">👇 Окей, а тепер спробуй відмітити обід!</p>
         <div class="meal active">▶️ Обід (Салат з куркою)</div>
         <div class="meal">▶️ Вечеря (Запечена риба)</div>
-
         <div class="calories">Калорії: 1500 / 1800</div>
-
+        <div class="disabled">
+          🔒 Змінити продукти/страви
+          <span class="tooltip">Розблокується на 2 день використання</span>
+        </div>
         <div class="disabled">
           🔒 Тижневий план
           <span class="tooltip">Розблокується на 3 день використання</span>
         </div>
+      </div>
 
+      <div id="screen-2" class="screen hidden">
+        <h2>Сьогодні, 16 Лютого</h2>
+        <div class="meal completed">✔️ Сніданок (Вівсянка з ягодами)</div>
+        <div class="meal completed">✔️ Обід (Салат з куркою)</div>
+        <div class="meal active">▶️ Вечеря (Запечена риба)</div>
+        <div class="calories">Калорії: 1600 / 1800</div>
+        <div class="enabled">
+          ✅ Змінити продукти/страви
+          <span class="tooltip">Функція доступна на 2 день використання</span>
+        </div>
         <div class="disabled">
-          🔒 Налаштування профілю
+          🔒 Тижневий план
           <span class="tooltip">Розблокується на 3 день використання</span>
         </div>
+      </div>
 
-        <div class="disabled">
-          🔒 Історія
-          <span class="tooltip">Розблокується на 3 день використання</span>
+      <div id="screen-3" class="screen hidden">
+        <h2>Сьогодні, 17 Лютого</h2>
+        <div class="meal completed">✔️ Сніданок (Вівсянка з ягодами)</div>
+        <div class="meal completed">✔️ Обід (Салат з куркою)</div>
+        <div class="meal completed">✔️ Вечеря (Запечена риба)</div>
+        <div class="calories">Калорії: 1700 / 1800</div>
+        <div class="enabled">
+          ✅ Змінити продукти/страви
+          <span class="tooltip">Функція доступна на 2 день використання</span>
+        </div>
+        <div class="enabled">
+          ✅ Тижневий план
+          <span class="tooltip"
+            >Тижневий план доступний на 3 день використання</span
+          >
         </div>
       </div>
     </div>
 
-    <script src="js/main.js"></script>
+    <!-- Day Buttons outside the screens (below the Home-Onboarding button) -->
+    <div class="day-buttons-container">
+      <button id="day1-btn" class="day-button">Day 1</button>
+      <button id="day2-btn" class="day-button">Day 2</button>
+      <button id="day3-btn" class="day-button">Day 3</button>
+    </div>
+
+    <script src="js/home.js"></script>
   </body>
 </html>

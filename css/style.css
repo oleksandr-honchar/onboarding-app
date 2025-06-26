@@ -15,11 +15,15 @@ h1 {
   font-size: 24px;
 }
 
+p {
+  margin: 0;
+}
+
 .progress-bar {
   background: #444;
   height: 8px;
   border-radius: 5px;
-  margin: 10px 0;
+  margin: 20px 0; /* Increased gap */
   overflow: hidden;
 }
 
@@ -31,29 +35,33 @@ h1 {
 }
 
 #step-label {
-  margin-bottom: 10px;
+  margin-bottom: 20px; /* Increased gap */
 }
 
-.card {
+.card,
+.home-card {
   background: #222;
-  padding: 20px;
+  padding: 24px 16px; /* Increased padding */
   border-radius: 10px;
-  width: 85%;
+  width: 90%;
   max-width: 350px;
-  height: 600px;
+  height: 95vh;
   box-sizing: border-box;
   text-align: center;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Increased gap between sections */
   overflow: hidden;
 }
 
 .step {
   position: absolute;
-  top: 80px;
+  top: 100px; /* Increased space for better visibility */
   left: 0;
   right: 0;
   width: 100%;
-  height: calc(100% - 80px);
+  height: calc(100% - 100px);
   padding: 20px;
   box-sizing: border-box;
   display: flex;
@@ -70,7 +78,7 @@ h1 {
 
 .button-row {
   position: absolute;
-  bottom: 30px;
+  bottom: 50px; /* Increased space at the bottom */
   left: 20px;
   right: 20px;
   display: flex;
@@ -82,11 +90,10 @@ button {
   background: #0a84ff;
   color: white;
   border: none;
-  padding: 10px 16px;
+  padding: 12px 18px; /* Increased padding */
   border-radius: 6px;
   cursor: pointer;
   font-size: 14px;
-  /* margin-right: 30px; */
 }
 
 button:hover {
@@ -94,21 +101,21 @@ button:hover {
 }
 
 input[type="number"] {
-  margin: 8px;
+  margin: 12px; /* Increased margin */
 }
 
 label {
   display: block;
-  margin: 4px 0;
+  margin: 8px 0; /* Increased margin */
   text-align: left;
   font-size: 16px;
   cursor: pointer;
 }
 
 input[type="radio"] {
-  margin: 8px;
+  margin: 12px;
   transform: scale(1.5);
-  margin-right: 10px;
+  margin-right: 12px; /* Increased spacing */
   cursor: pointer;
 }
 
@@ -116,7 +123,7 @@ input[type="radio"] {
   display: flex;
   gap: 16px;
   justify-content: start;
-  margin-bottom: 8px;
+  margin-bottom: 16px; /* Increased gap */
 }
 
 .radio-row label {
@@ -135,13 +142,13 @@ input[type="radio"] {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px 0;
+  margin: 30px 0; /* Increased margin */
 }
 
 .meal-img {
   width: 120px;
   height: 80px;
-  margin-right: 15px;
+  margin-right: 20px; /* Increased margin */
   border-radius: 8px;
 }
 
@@ -154,7 +161,7 @@ input[type="radio"] {
   background-color: #28a745;
   color: #fff;
   border: none;
-  padding: 12px 24px;
+  padding: 14px 28px; /* Increased padding */
   border-radius: 8px;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
@@ -166,16 +173,14 @@ input[type="radio"] {
   transform: scale(1.05);
 }
 
-/* Switch page button */
-
 .top-right-button {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 20px; /* Increased top margin */
+  right: 20px; /* Increased right margin */
   background-color: #0a84ff;
   color: white;
   border: none;
-  padding: 8px 14px;
+  padding: 10px 16px; /* Increased padding */
   border-radius: 6px;
   font-size: 14px;
   cursor: pointer;
@@ -186,39 +191,11 @@ input[type="radio"] {
   background-color: #006fe0;
 }
 
-/* 🌌 Home Screen Layout Match */
-
-.home-body {
-  font-family: Arial, sans-serif;
-  background: #111;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  overflow: hidden;
-}
-
-.home-card {
-  background: #222;
-  padding: 20px;
-  border-radius: 10px;
-  width: 85%;
-  max-width: 350px;
-  height: 600px;
-  box-sizing: border-box;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-/* 💡 Optional: Shared button style reuse */
 .home-button {
   background: #0a84ff;
   color: white;
   border: none;
-  padding: 10px 16px;
+  padding: 12px 20px; /* Increased padding */
   border-radius: 6px;
   cursor: pointer;
   font-size: 14px;
@@ -228,60 +205,52 @@ input[type="radio"] {
   background: #006fe0;
 }
 
-/* 🏠 Home Layout Container */
-.home-container {
-  margin-top: 20px;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-/* 🍽 Meal Block */
-.meal {
+.meal,
+.home-card .meal {
   background-color: #333;
-  padding: 10px 14px;
+  padding: 12px 16px; /* Increased padding */
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.4;
+  margin-bottom: 24px; /* Increased bottom margin */
   transition: background 0.3s ease;
 }
 
-/* ✅ Completed Meal */
-.meal.completed {
-  background-color: #28a745; /* green */
+.meal.completed,
+.home-card .meal.completed {
+  background-color: #28a745;
   color: #fff;
   font-weight: bold;
 }
 
-/* ⏳ Active Meal */
-.meal.active {
-  background-color: #0a84ff; /* blue */
+.meal.active,
+.home-card .meal.active {
+  background-color: #0a84ff;
   color: #fff;
   font-weight: bold;
 }
 
-/* 🔲 Default Upcoming */
-.meal:not(.completed):not(.active) {
+.meal:not(.completed):not(.active),
+.home-card .meal:not(.completed):not(.active) {
   background-color: #444;
   color: #ccc;
 }
 
-/* 🔥 Calorie Info */
-.calories {
-  margin-top: 12px;
+.calories,
+.home-card .calories {
+  margin-top: 20px; /* Increased top margin */
   background-color: #555;
   color: #fff;
-  padding: 10px 14px;
+  padding: 12px 16px; /* Increased padding */
   border-radius: 8px;
   text-align: center;
   font-weight: bold;
 }
 
-/* 🚫 Disabled Buttons */
-.disabled {
-  margin-top: 4px;
-  padding: 10px 14px;
+.disabled,
+.home-card .disabled {
+  margin-top: 12px; /* Increased margin */
+  padding: 10px 16px; /* Increased padding */
   border-radius: 8px;
   background-color: #222;
   color: #666;
@@ -289,33 +258,25 @@ input[type="radio"] {
   font-style: italic;
   opacity: 0.6;
   cursor: not-allowed;
+  font-size: 14px;
+  line-height: 1;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* 🧭 Micro-instruction for next meal */
 .next-instruction {
-  margin-top: 8px;
-  margin-bottom: 4px;
-  padding-left: 10px;
+  margin-top: 10px; /* Increased top margin */
+  margin-bottom: 4px; /* Increased bottom margin */
+  padding-left: 12px; /* Increased left padding */
   font-style: italic;
   color: #aaa;
   font-size: 14px;
 }
 
-/* 🔒 Tooltip container */
-.disabled {
-  position: relative;
-  background-color: #222;
-  color: #666;
-  padding: 10px 14px;
-  border-radius: 8px;
-  text-align: center;
-  opacity: 0.6;
-  cursor: not-allowed;
-  font-size: 15px;
-}
-
-/* 📝 Tooltip text */
-.disabled .tooltip {
+.disabled .tooltip,
+.home-card .disabled .tooltip {
   visibility: hidden;
   background-color: #000;
   color: #fff;
@@ -333,8 +294,92 @@ input[type="radio"] {
   transition: opacity 0.3s;
 }
 
-/* 📣 Show on hover */
+.disabled:hover .tooltip,
+.home-card .disabled:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.day-toggle {
+  margin: 30px 0; /* Increased top and bottom margin */
+  display: flex;
+  gap: 12px; /* Increased gap */
+  flex-wrap: wrap;
+}
+
+.enabled {
+  background-color: #2e7d32;
+  color: #fff;
+  padding: 12px; /* Increased padding */
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+.tooltip {
+  display: block;
+  font-size: 0.85em;
+  color: #bbb;
+  margin-top: 6px; /* Increased top margin */
+}
+
+.enabled,
+.disabled {
+  position: relative;
+  padding: 12px 14px; /* Increased padding */
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+  cursor: default;
+}
+
+.enabled .tooltip,
+.disabled .tooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  z-index: 10;
+  font-size: 12px;
+  transition: opacity 0.3s ease;
+}
+
+.enabled:hover .tooltip,
 .disabled:hover .tooltip {
   visibility: visible;
   opacity: 1;
+}
+
+.day-buttons-container {
+  position: absolute;
+  top: 80px; /* Increased top margin */
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px; /* Increased gap */
+}
+
+.day-button {
+  padding: 12px; /* Increased padding */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.day-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.day-button:hover {
+  background-color: #0056b3;
 }
