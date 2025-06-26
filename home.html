@@ -10,9 +10,14 @@
     <button class="top-right-button" onclick="location.href='index.html'">
       Go to Onboarding
     </button>
+    <div class="day-buttons-container">
+      <button id="day1-btn" class="day-button">Day 1</button>
+      <button id="day2-btn" class="day-button">Day 2</button>
+      <button id="day3-btn" class="day-button">Day 3</button>
+    </div>
 
     <div class="home-card">
-      <h1>👋 Ласкаво просимо до HealthPlate</h1>
+      <h1>👋 HealthPlate</h1>
       <p>Тут ти можеш відстежувати свій раціон і досягати цілей!</p>
 
       <div id="screen-1" class="screen">
@@ -30,6 +35,10 @@
           🔒 Тижневий план
           <span class="tooltip">Розблокується на 3 день використання</span>
         </div>
+        <div class="disabled">
+          🔒 Налаштування профілю
+          <span class="tooltip">Розблокується на 3 день використання</span>
+        </div>
       </div>
 
       <div id="screen-2" class="screen hidden">
@@ -44,6 +53,10 @@
         </div>
         <div class="disabled">
           🔒 Тижневий план
+          <span class="tooltip">Розблокується на 3 день використання</span>
+        </div>
+        <div class="disabled">
+          🔒 Налаштування профілю
           <span class="tooltip">Розблокується на 3 день використання</span>
         </div>
       </div>
@@ -63,16 +76,16 @@
           <span class="tooltip"
             >Тижневий план доступний на 3 день використання</span
           >
-        </div>
       </div>
+      <div class="enabled">
+        ✅ Налаштування профілю
+        <span class="tooltip"
+          >Налаштування профілю доступне на 3 день використання</span
+        >
+    </div>
     </div>
 
-    <!-- Day Buttons outside the screens (below the Home-Onboarding button) -->
-    <div class="day-buttons-container">
-      <button id="day1-btn" class="day-button">Day 1</button>
-      <button id="day2-btn" class="day-button">Day 2</button>
-      <button id="day3-btn" class="day-button">Day 3</button>
-    </div>
+  
 
     <script src="js/home.js"></script>
   </body>

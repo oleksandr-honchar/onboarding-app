@@ -267,9 +267,9 @@ input[type="radio"] {
 }
 
 .next-instruction {
-  margin-top: 10px; /* Increased top margin */
-  margin-bottom: 4px; /* Increased bottom margin */
-  padding-left: 12px; /* Increased left padding */
+  margin-top: 10px;
+  margin-bottom: 4px;
+  padding-left: 12px;
   font-style: italic;
   color: #aaa;
   font-size: 14px;
@@ -312,6 +312,7 @@ input[type="radio"] {
   color: #fff;
   padding: 12px; /* Increased padding */
   margin-top: 10px;
+  margin-bottom: 20px;
   border-radius: 6px;
 }
 
@@ -358,15 +359,15 @@ input[type="radio"] {
 
 .day-buttons-container {
   position: absolute;
-  top: 80px; /* Increased top margin */
+  top: 80px;
   right: 10px;
   display: flex;
   flex-direction: column;
-  gap: 14px; /* Increased gap */
+  gap: 14px;
 }
 
 .day-button {
-  padding: 12px; /* Increased padding */
+  padding: 12px;
   background-color: #007bff;
   color: white;
   border: none;
